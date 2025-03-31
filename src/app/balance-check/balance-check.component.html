@@ -1,0 +1,7 @@
+<div class="balance-check">
+    <h3>Check Balance</h3>
+    <p>Account ID: <input type="number" [(ngModel)]="accountId" /></p>  <!-- Input for account ID -->
+    <button (click)="checkBalance()">Show Balance</button>  <!-- Button to call checkBalance function -->
+    <p *ngIf="balance !== 0">Balance: {{ balance | currency }}</p>  <!-- Display balance if not zero -->
+  </div>
+  
