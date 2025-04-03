@@ -1,7 +1,16 @@
-<div class="balance-check">
-    <h3>Check Balance</h3>
-    <p>Account ID: <input type="number" [(ngModel)]="accountId" /></p>  <!-- Input for account ID -->
-    <button (click)="checkBalance()">Show Balance</button>  <!-- Button to call checkBalance function -->
-    <p *ngIf="balance !== 0">Balance: {{ balance | currency }}</p>  <!-- Display balance if not zero -->
-  </div>
-  
+<div>
+  <h2>Login</h2>
+  <label>Username:</label>
+  <input [(ngModel)]="username" type="text" />
+  <label>Password:</label>
+  <input [(ngModel)]="password" type="password" />
+  <button (click)="login()">Login</button>
+</div>
+
+<div *ngIf="token">
+  <h2>Check Balance</h2>
+  <label>Account ID:</label>
+  <input [(ngModel)]="accountId" type="number" />
+  <button (click)="checkBalance()">Check Balance</button>
+  <p *ngIf="balance !== 0">Balance: {{ balance | currency }}</p>
+</div>
